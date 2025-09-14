@@ -346,17 +346,17 @@ TEST_CASE("Check swap method") {
     }
 }
 
-// TEST_CASE("Check reverse iterators rbegin and rend") {
-//     AvlSet<int> a;
-//     for (int i = 0; i < 1000; ++i) {
-//         a.insert(i);
-//     }
+TEST_CASE("Check reverse iterators rbegin and rend") {
+    AvlSet<int> a;
+    for (int i = 0; i < 1000; ++i) {
+        a.insert(i);
+    }
 
-//     auto rit = a.rbegin();
-//     int expected = 999;
-//     while (rit != a.rend()) {
-//         CHECK_EQ(*rit, expected--);
-//         ++rit;
-//     }
-//     CHECK(expected == -1);
-// }
+    auto rit = a.rbegin();
+    int expected = 999;
+    while (rit != a.rend()) {
+        CHECK_EQ(*rit, expected--);
+        ++rit;
+    }
+    CHECK(expected == -1);
+}
